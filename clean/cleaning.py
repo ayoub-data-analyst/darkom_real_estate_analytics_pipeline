@@ -219,10 +219,6 @@ logging.info("STEP 3 END - Missing values handled")
 # STEP 4 : HANDLE OUTLIERS
 # =========================
 
-# ==================================================
-# STEP 4 : DETECT & REMOVE OUTLIERS
-# ==================================================
-
 logging.info("STEP 4 START - Detecting outliers")
 
 # Function to detect outliers using IQR
@@ -295,6 +291,8 @@ print(f"Total outliers percentage: {total_percentage:.2f}%")
 print("=" * 50)
 
 # Remove unrealistic outliers
+df = df[df["surface"] >= 30]
+
 df = df[df["nb_chambres"] <= 10]
 
 df = df[df["nb_salles_bain"] <= 6]
@@ -307,6 +305,7 @@ logging.info("STEP 4 END - Outliers handled successfully")
 # ===========
 # FINAL STEP
 # ===========
+
 logging.info("Start saving in CSV file")
 
 df.to_csv("data/cleaned_data.csv", index=False)

@@ -102,7 +102,7 @@ logging.info("Tables of bi_schema created successfully")
 
 
 # load csv
-df = pd.read_csv(r"/home/ayoub/Desktop/darkom_annonces/data/cleaned_feature_eng_data.csv")
+df = pd.read_csv(r"C:\Users\HP\Desktop\101-flow-vd\darkom_annonces\darkom_annonces\data\cleaned_feature_eng_data.csv")
 
 logging.info("Load csv successfully")
 

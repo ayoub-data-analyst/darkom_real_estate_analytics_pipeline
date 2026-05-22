@@ -13,7 +13,7 @@ logging.basicConfig(
 logging.info("Start Feature Enginnering processe ...")
 
 # load cleaned data
-df = pd.read_csv(r"/home/ayoub/Desktop/darkom_annonces/data/cleaned_data.csv")
+df = pd.read_csv(r"C:\Users\HP\Desktop\101-flow-vd\darkom_annonces\darkom_annonces\data\cleaned_data.csv")
 
 
 # Create price per square meter
@@ -88,6 +88,9 @@ df["trimestre_publication"] = (
 
 logging.info("Start saving in CSV file")
 
-df.to_csv("data/cleaned_feature_eng_data.csv", index=False)
+df.to_csv(
+    r"C:\Users\HP\Desktop\101-flow-vd\darkom_annonces\darkom_annonces\data\cleaned_feature_eng_data.csv",
+    index=False
+)
 
 logging.info("Feature engineering completed.")

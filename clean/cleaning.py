@@ -308,6 +308,9 @@ logging.info("STEP 4 END - Outliers handled successfully")
 
 logging.info("Start saving in CSV file")
 
-df.to_csv("data/cleaned_data.csv", index=False)
+df.to_csv(
+    r"C:\Users\HP\Desktop\101-flow-vd\darkom_annonces\darkom_annonces\data\cleaned_data.csv",
+    index=False
+)
 
 logging.info("Cleaning pipeline completed successfully")

@@ -60,7 +60,7 @@ with engine.begin() as conn:
 logging.info("Table staging.darkom_annonces created successfully")
 
 # Read raw CSV file
-df = pd.read_csv("data/darkom_annonces.csv")
+df = pd.read_csv(r"C:\Users\HP\Desktop\101-flow-vd\darkom_annonces\darkom_annonces\data\darkom_annonces.csv")
 
 logging.info(f"CSV loaded successfully with {len(df)} rows")
 

@@ -181,9 +181,9 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=darkom_db
+DB_HOST=your_host
+DB_PORT=your_port
+DB_NAME=your_db_name
 DB_USER=your_user
 DB_PASSWORD=your_password
 ```

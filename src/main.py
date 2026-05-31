@@ -9,16 +9,16 @@ logging.basicConfig(
 try:
 
     print("1. Creating staging schema...")
-    import warehouse.staging_schema
+    import src.warehouse.staging_schema
 
     print("2. Cleaning data...")
-    import clean.cleaning
+    import src.warehouse.clean.cleaning
 
     print("3. Feature engineering...")
-    import Feature_Engineering.feature_eng
+    import Feature_Engineering.feature_engineering
 
     print("4. Creating BI schema...")
-    import warehouse.bi_schema
+    import src.warehouse.bi_schema
 
     print("Pipeline finished successfully")
     logging.info("Pipeline finished successfully")

@@ -19,33 +19,47 @@ All stages are orchestrated by a single `main.py` entry point, with each step in
 ## Project Structure
 
 ```
-darkom_annonce/
+DARKOM_ANNONCES/
 │
-├── main.py                                     # Pipeline orchestrator
 ├── requirements.txt                            # Python dependencies
 ├── .gitignore
+├── .env
 │
 ├── data/
-│   ├── darkom_annonces.csv                     # Raw source data (1,508 listings)
-│   ├── cleaned_data.csv                        # Output of cleaning step
-│   └── cleaned_feature_eng_data.csv            # Output of feature engineering step
+│   ├── raw/
+│   │   └── darkom_annonces.csv                 # Raw source data (1,508 listings)
+│   └── processed/
+│       ├── cleaned_data.csv                    # Output of cleaning step
+│       └── cleaned_feature_eng_data.csv        # Output of feature engineering step
 │
-├── clean/
-│   └── cleaning.py                             # 4-step cleaning pipeline
+├── logs/
+│   ├── bi_schema.log
+│   ├── cleaning.log
+│   ├── feature_eng.log
+│   ├── main.log
+│   └── staging_schema.log
 │
-├── Feature_Engineering/
-│   └── feature_eng.py                          # Derived feature computation
+├── reports/
+│   ├── power_bi/
+│   │   └── darkom.pbix                         # Power BI report file
+│   └── screenshots/
+│       ├── report_1.jpeg
+│       ├── report_2.jpeg
+│       ├── report_3.jpeg
+│       └── report_4.jpeg                       # Dashboard screenshots (4 pages)
 │
-├── warehouse/
-│   ├── staging_schema.py                       # Loads raw data into PostgreSQL staging
-│   └── bi_schema.py                            # Builds star-schema BI tables
+├── src/
+│   ├── main.py                                 # Pipeline orchestrator
+│   ├── clean/
+│   │   └── cleaning.py                         # 4-step cleaning pipeline
+│   ├── feature_engineering/
+│   │   └── feature_engineering.py              # Derived feature computation
+│   └── warehouse/
+│       ├── bi_schema.py                        # Builds star-schema BI tables
+│       └── staging_schema.py                   # Loads raw data into PostgreSQL staging
 │
-├── darkom_real_estate_dashboard/
-│   ├── power_bi/darkom.pbix                    # Power BI report file
-│   └── screen_reports/                         # Dashboard screenshots (4 pages)
-│
-└── test/
-    └── test.ipynb                              # Exploratory / unit tests notebook
+└── tests/
+    └── tests.ipynb                             # Exploratory / unit tests notebook
 ```
 
 ---

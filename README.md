@@ -161,16 +161,16 @@ The `.pbix` file connects to the BI schema and provides 4 report pages.
 ## Dashboard Screenshots
 
 **Report 1**
-![Report 1](darkom_real_estate_dashboard/screen_reports/report_1.jpeg)
+![Report 1](reports/screenshots/report_1.jpeg)
 
 **Report 2**
-![Report 2](darkom_real_estate_dashboard/screen_reports/report_2.jpeg)
+![Report 2](reports/screenshots/report_2.jpeg)
 
 **Report 3**
-![Report 3](darkom_real_estate_dashboard/screen_reports/report_3.jpeg)
+![Report 3](reports/screenshots/report_3.jpeg)
 
 **Report 4**
-![Report 4](darkom_real_estate_dashboard/screen_reports/report_4.jpeg)
+![Report 4](reports/screenshots/report_4.jpeg)
 
 ---
 
